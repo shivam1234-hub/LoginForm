@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" class="favicon" type="image/jpg" href="https://img.icons8.com/officel/80/000000/edit-user-male.png"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoginPage</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Arya' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="inner-box" id="card">
+                <div class="card-front">
+                    <h2>Login</h2>
+                    <% if (messages.error) { %>
+                       <h1 class="message"><%= messages.error %></h1> 
+                      <% } %>
+                    <form id="reg-form" action="/" method="POST">
+                        <input type="email" class="input-box" id="email" name="email" placeholder="Email id" required>
+                        <input id="password" type="password" class="input-box" name="password" placeholder=" Password" required>
+                        <button type="submit" value="Login" class="submit-btn">Login</button>
+                        <input type="checkbox"><span>Remember Me</span>
+
+                    </form>
+                   <button type="button"  id="new" class="btn">I'm new here</button>
+                    <a href="">Forgot Password</a>
+                </div>
+                <!-- <div class="card-back">
+                <h2>Register</h2>
+                <form action="/register" method="POST">
+                    <input name="Name" autocomplete="off"  type="text" class="input-box" placeholder="UserName" required>
+                    <input name="email" type="email" class="input-box" placeholder="Email id" required>
+                    <input   name="password"type="password" class="input-box" placeholder=" Password" required>
+                    <input name=" confirmPassword" type="password" class="input-box" placeholder="Confirm Password" required>
+                   
+                    <button type="submit" onclick="openLogin()" class="submit-btn">Register</button>
+                    <input type="checkbox"><span> Remember Me</span>
+
+                </form>
+                <button type="button" onclick="openLogin()" class="btn1">I've an Account</button>
+                <a href="">Forgot Password</a>
+            </div> -->
+            </div>
+        </div>
+    </div>
+<script>
+    document.getElementById('new').onclick=function(){
+        location.href='/register';
+    }
+</script>
+   
+</body>
+</html>

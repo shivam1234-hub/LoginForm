@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" class="favicon" type="image/jpg" href="https://img.icons8.com/officel/80/000000/edit-user-male.png"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registeration</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Arya' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="inner-box" id="card">
+              
+                <div class="card-back">
+                <h2>Register</h2>
+                <form action="/register" method="POST">
+                    <input name="name" id="name" autocomplete="off"  type="text" class="input-box" placeholder="UserName" required>
+                    <input name="email" type="email" id="email" class="input-box" placeholder="Email id" required>
+                    <input  id="password" name="password" type="password" class="input-box" placeholder=" Password" required>
+                    <input name=" confirmPassword" type="password" class="input-box" placeholder="Confirm Password" required>
+                   
+                   <button type="submit" id="log" class="submit-btn">Register</button>
+                    <input type="checkbox"><span> Remember Me</span>
+
+                </form>
+                <button type="button" id="log1" class="btn1">I've an Account</button>
+                <a href="">Forgot Password</a>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // document.getElementById('log').onclick=function(){
+        //     location.href='/';
+        // }
+        document.getElementById('log1').onclick=function(){
+            location.href='/';
+        }
+    </script>
+       
+   
+</body>
+</html>
